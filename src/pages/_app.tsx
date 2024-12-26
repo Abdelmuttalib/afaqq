@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 import ThemeSelect from "@/components/theme-select";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         <TailwindIndicator />
         <Component {...pageProps} />
+        <Analytics />
         <div className="fixed bottom-0 right-0 flex items-center justify-center gap-2 p-2 bg-background/70 backdrop-blur-lg backdrop-filter size-fit">
           <ThemeSelect />
         </div>
