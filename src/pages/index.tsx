@@ -23,13 +23,13 @@ function Layout({ children }: { children: React.ReactNode }) {
                 className="peer hidden"
               />
               <div className="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
-                <a
+                <Link
                   href="/"
                   aria-label="logo"
                   className="flex items-center space-x-1.5"
                 >
                   <Logo />
-                </a>
+                </Link>
 
                 <div className="relative flex max-h-10 items-center lg:hidden">
                   <label
@@ -257,6 +257,7 @@ import {
   HiOutlineCamera,
   HiOutlineChartBar,
 } from "react-icons/hi";
+import Link from "next/link";
 
 const services = [
   {
