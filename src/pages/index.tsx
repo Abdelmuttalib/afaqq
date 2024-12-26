@@ -343,10 +343,13 @@ export function Portfolio() {
         />
 
         <div className="grid md:grid-cols-2 gap-2">
-          {projects.map((project, index) => {
+          {projects.map((project) => {
             const { title, category, bgColor } = project;
             return (
-              <div className="group relative overflow-hidden rounded-lg aspect-video">
+              <div
+                key={title}
+                className="group relative overflow-hidden rounded-lg aspect-video"
+              >
                 <div className={`w-full h-full ${bgColor}`} />
                 <div className="absolute inset-0 bg-[#141414] bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-center">
