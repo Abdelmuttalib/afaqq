@@ -1,13 +1,13 @@
 import { siteConfig } from "@/config/site-config";
 import { Logo } from "@/components/logo";
-import { Container, MiniContainer } from "@/components/layout/Container";
-import { Button } from "@/components/ui/button";
+import { MiniContainer } from "@/components/layout/Container";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 import { Typography } from "@/components/ui/typography";
+import { SectionTitle } from "@/components/ui/SectionTitle";
+import { GradientBackground } from "@/components/ui/gradient";
 
 function Layout({ children }: { children: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen relative">
@@ -197,21 +197,21 @@ export default function Home() {
   );
 }
 
-function HomeSection({
-  id,
-  className,
-  children,
-}: {
-  id: string;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div id={id} className={cn("py-44", className)}>
-      {children}
-    </div>
-  );
-}
+// function HomeSection({
+//   id,
+//   className,
+//   children,
+// }: {
+//   id: string;
+//   className?: string;
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <div id={id} className={cn("py-44", className)}>
+//       {children}
+//     </div>
+//   );
+// }
 
 function Hero() {
   return (
@@ -312,10 +312,6 @@ export function Services() {
     </section>
   );
 }
-
-import { SectionTitle } from "@/components/ui/SectionTitle";
-import { ArrowRight } from "lucide-react";
-import { GradientBackground } from "@/components/ui/gradient";
 
 const projects = [
   {

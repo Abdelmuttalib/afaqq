@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { GradientBackground } from "@/components/ui/gradient";
 import { Typography } from "./ui/typography";
 
 export default function Hero() {
